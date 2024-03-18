@@ -70,4 +70,15 @@ public class CalculadoraTestes
         // Assert
         Assert.True(result);
     }
+
+    [Theory]
+    [InlineData(new int[] { 2, 4 })]
+    [InlineData(new int[] { 6, 8, 10 })]
+    public void DeveVerificarSeAListaDeNumerosSaoParesERetornarVerdadeiro(int[] numeros)
+    {
+        // Arrange
+
+        // Act / Assert
+        Assert.All(numeros, num => Assert.True(_calc.EhPar(num)));
+    }
 }
