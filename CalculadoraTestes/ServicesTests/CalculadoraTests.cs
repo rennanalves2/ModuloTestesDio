@@ -1,5 +1,6 @@
 using Calculadora.Services;
 using NuGet.Frameworks;
+using System;
 
 namespace CalculadoraTestes.ServicesTests;
 
@@ -48,6 +49,23 @@ public class CalculadoraTestes
 
         // Act
         bool result = _calc.EhPar(num);
+
+        // Assert
+        Assert.True(result);
+    }
+
+    [Theory]
+    [InlineData(2)]
+    [InlineData(4)]
+    [InlineData(6)]
+    [InlineData(8)]
+    [InlineData(10)]
+    public void DeveVerificarSeOsNumerosSaoParesERetornarVerdadeiro(int numero)
+    {
+        // Arrange
+
+        // Act
+        bool result = _calc.EhPar(numero);
 
         // Assert
         Assert.True(result);
