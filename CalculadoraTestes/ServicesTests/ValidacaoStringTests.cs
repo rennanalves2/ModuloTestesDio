@@ -7,23 +7,23 @@ using System.Threading.Tasks;
 
 namespace CalculadoraTestes.ServicesTests
 {
-    public class StringValidationTests
+    public class ValidacaoStringTests
     {
-        private StringValidation _stringValidation;
+        private ValidacaoString _stringValidation;
 
-        public StringValidationTests()
+        public ValidacaoStringTests()
         {
-            _stringValidation = new StringValidation();
+            _stringValidation = new ValidacaoString();
         }
 
         [Fact]
         public void DeveContar3CaracteresEmOlaERetornar3()
         {
             // Arrange
-            var text = "Ola";
+            var texto = "Ola";
 
             // Act
-            var result = _stringValidation.CountChar(text);
+            var result = _stringValidation.ContadorCaracteres(texto);
 
             // Assert
             Assert.Equal(3, result);

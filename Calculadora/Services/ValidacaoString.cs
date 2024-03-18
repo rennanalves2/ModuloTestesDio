@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Calculadora.Services
 {
-    public class StringValidation
+    public class ValidacaoString
     {
-        public int CountChar(string text)
+        public int ContadorCaracteres(string texto)
         {
-            int num = text.Length;
+            int num = texto.Length;
             return num;
         }
     }
