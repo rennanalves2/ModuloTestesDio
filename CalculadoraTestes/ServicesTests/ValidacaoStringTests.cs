@@ -20,10 +20,10 @@ namespace CalculadoraTestes.ServicesTests
         public void DeveContar3CaracteresEmOlaERetornar3()
         {
             // Arrange
-            var texto = "Ola";
+            string texto = "Ola";
 
             // Act
-            var result = _stringValidation.ContadorCaracteres(texto);
+            int result = _stringValidation.ContadorCaracteres(texto);
 
             // Assert
             Assert.Equal(3, result);

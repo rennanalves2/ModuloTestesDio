@@ -20,7 +20,7 @@ public class CalculadoraTestes
         int num2 = 10;
 
         // Act
-        var result = _calc.Somar(num1, num2);
+        int result = _calc.Somar(num1, num2);
 
         // Assert
         Assert.Equal(15, result);
@@ -34,7 +34,7 @@ public class CalculadoraTestes
         int num2 = 10;
 
         // Act
-        var result = _calc.Somar(num1, num2);
+        int result = _calc.Somar(num1, num2);
 
         // Assert
         Assert.Equal(20, result);
@@ -47,7 +47,7 @@ public class CalculadoraTestes
         int num = 4;
 
         // Act
-        var result = _calc.EhPar(num);
+        bool result = _calc.EhPar(num);
 
         // Assert
         Assert.True(result);
